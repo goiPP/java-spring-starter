@@ -1,0 +1,12 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: java-spring-starter-service
+---
+spring:
+  liquibase:
+    enabled: true
+    contexts: local
+  security:
+    enabled: false
