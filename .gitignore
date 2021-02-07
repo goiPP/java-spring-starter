@@ -1,0 +1,28 @@
+/.gradle/
+**/.DS_Store
+**/build/
+**/classes/
+.gradletasknamecache
+gradle.properties
+.envrc
+
+### IntelliJ IDEA ###
+.idea/
+**/*.iws
+**/*.iml
+**/*.ipr
+**/out/
+.shelf
+
+### Zipped archives ###
+**/*.tar
+**/*.jar
+
+### VS Code ###
+**/.classpath
+**/.project
+**/.settings
+**/bin
+
+### Don't ignore ###
+!gradle-wrapper.jar
