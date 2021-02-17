@@ -1,4 +1,4 @@
-package com.starter.javaspring.configurations;
+package com.starter.javaspring.configuration;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

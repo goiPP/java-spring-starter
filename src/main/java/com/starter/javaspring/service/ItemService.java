@@ -1,4 +1,4 @@
-package com.starter.javaspring.services;
+package com.starter.javaspring.service;
 
 import com.starter.javaspring.domain.Item;
 import java.util.List;

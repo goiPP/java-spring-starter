@@ -1,7 +1,7 @@
-package com.starter.javaspring.controllers;
+package com.starter.javaspring.controller;
 
 import com.starter.javaspring.domain.Item;
-import com.starter.javaspring.services.ItemService;
+import com.starter.javaspring.service.ItemService;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import lombok.AllArgsConstructor;

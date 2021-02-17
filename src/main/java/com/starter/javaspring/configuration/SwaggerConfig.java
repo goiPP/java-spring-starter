@@ -1,4 +1,4 @@
-package com.starter.javaspring.configurations;
+package com.starter.javaspring.configuration;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

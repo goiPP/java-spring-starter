@@ -1,4 +1,4 @@
-package com.starter.javaspring.services.impl;
+package com.starter.javaspring.service.impl;
 
 
 import com.google.api.core.ApiFuture;
@@ -10,7 +10,7 @@ import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.cloud.FirestoreClient;
 import com.starter.javaspring.domain.Item;
 import com.starter.javaspring.repository.ItemRepository;
-import com.starter.javaspring.services.ItemService;
+import com.starter.javaspring.service.ItemService;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

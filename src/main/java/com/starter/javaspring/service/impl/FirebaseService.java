@@ -1,7 +1,6 @@
-package com.starter.javaspring.services.impl;
+package com.starter.javaspring.service.impl;
 
 import com.google.auth.oauth2.GoogleCredentials;
-import com.google.cloud.firestore.Firestore;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.FirebaseOptions;
 import java.io.FileInputStream;
