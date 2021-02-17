@@ -8,19 +8,23 @@ import com.google.cloud.firestore.QueryDocumentSnapshot;
 import com.google.cloud.firestore.QuerySnapshot;
 import com.google.cloud.firestore.WriteResult;
 import com.google.firebase.cloud.FirestoreClient;
-import com.starter.javaspring.domains.Item;
+import com.starter.javaspring.domain.Item;
+import com.starter.javaspring.repository.ItemRepository;
 import com.starter.javaspring.services.ItemService;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.stream.Collectors;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class ItemServiceImpl implements ItemService {
 
   private static final String COL_NAME = "shelf";
+  private final ItemRepository itemRepository;
   private Firestore db;
 
   @Override
@@ -51,5 +55,10 @@ public class ItemServiceImpl implements ItemService {
     } else {
       return null;
     }
+  }
+
+  @Override
+  public List<Item> saveItem(List<Item> items) {
+    return itemRepository.saveAll(items);
   }
 }
