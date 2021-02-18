@@ -36,6 +36,9 @@ dependencies {
 	// PostgreSQL
 	implementation 'org.postgresql:postgresql'
 
+	// ModelMapper
+	implementation 'org.modelmapper:modelmapper:2.3.9'
+
 	// liquibase
 	implementation 'org.liquibase:liquibase-core'
 

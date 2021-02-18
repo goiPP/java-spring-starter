@@ -1,15 +1,15 @@
 package com.starter.javaspring.service;
 
-import com.starter.javaspring.domain.Item;
+import com.starter.javaspring.model.dto.ItemDto;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public interface ItemService {
 
-  String writeItem(Item item) throws ExecutionException, InterruptedException;
+  String writeItem(ItemDto item) throws ExecutionException, InterruptedException;
 
-  Item readItem(String itemName) throws ExecutionException, InterruptedException;
+  ItemDto readItem(String itemName) throws ExecutionException, InterruptedException;
 
-  List<Item> saveItem(List<Item> items);
+  List<ItemDto> saveItem(List<ItemDto> items);
 
 }

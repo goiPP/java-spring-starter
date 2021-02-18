@@ -1,6 +1,6 @@
 package com.starter.javaspring.controller;
 
-import com.starter.javaspring.domain.Item;
+import com.starter.javaspring.model.dto.ItemDto;
 import com.starter.javaspring.service.ItemService;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -17,17 +17,17 @@ public class ItemController {
   private ItemService itemService;
 
   @PostMapping("/write")
-  public String writeItem(@RequestBody Item item) throws ExecutionException, InterruptedException {
+  public String writeItem(@RequestBody ItemDto item) throws ExecutionException, InterruptedException {
     return itemService.writeItem(item);
   }
 
   @GetMapping("/read")
-  public Item readItem(String itemName) throws ExecutionException, InterruptedException {
+  public ItemDto readItem(String itemName) throws ExecutionException, InterruptedException {
   return itemService.readItem(itemName);
   }
 
   @PostMapping("/save")
-  public List<Item> saveItem(@RequestBody List<Item> items) {
+  public List<ItemDto> saveItem(@RequestBody List<ItemDto> items) {
     return itemService.saveItem(items);
   }
 
