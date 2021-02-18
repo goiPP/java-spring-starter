@@ -61,6 +61,11 @@ public class ItemServiceImpl implements ItemService {
   }
 
   @Override
+  public ItemDto getItem(String itemName) {
+    return DomainModelMapper.itemToItemDto(itemRepository.findItemByName(itemName));
+  }
+
+  @Override
   public List<ItemDto> saveItem(List<ItemDto> itemDtos) {
     List<Item> savedItems =
         itemRepository.saveAll(

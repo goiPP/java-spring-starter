@@ -10,6 +10,8 @@ public interface ItemService {
 
   ItemDto readItem(String itemName) throws ExecutionException, InterruptedException;
 
+  ItemDto getItem(String itemName);
+
   List<ItemDto> saveItem(List<ItemDto> items);
 
 }

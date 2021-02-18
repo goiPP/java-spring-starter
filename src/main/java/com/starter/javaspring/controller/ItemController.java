@@ -26,6 +26,11 @@ public class ItemController {
   return itemService.readItem(itemName);
   }
 
+  @GetMapping("/item")
+  public ItemDto getItem(String itemName) {
+  return itemService.getItem(itemName);
+  }
+
   @PostMapping("/save")
   public List<ItemDto> saveItem(@RequestBody List<ItemDto> items) {
     return itemService.saveItem(items);
