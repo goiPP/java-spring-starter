@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("/client")
@@ -17,7 +18,7 @@ public class ClientContoller {
   private final ClientService clientService;
 
   @GetMapping("/items")
-  public List<ItemDto> getItems() {
+  public Flux<ItemDto> getItems() {
     return clientService.getAllItems();
   }
 
@@ -27,7 +28,7 @@ public class ClientContoller {
   }
 
   @PostMapping("/save")
-  public List<ItemDto> getItem(List<ItemDto> itemDtos) {
+  public List<ItemDto> saveItems(List<ItemDto> itemDtos) {
     return clientService.saveItems(itemDtos);
   }
 

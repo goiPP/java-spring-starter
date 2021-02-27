@@ -12,6 +12,8 @@ public interface ItemService {
 
   ItemDto getItem(String itemName);
 
+  List<ItemDto> getItems();
+
   List<ItemDto> saveItem(List<ItemDto> items);
 
 }

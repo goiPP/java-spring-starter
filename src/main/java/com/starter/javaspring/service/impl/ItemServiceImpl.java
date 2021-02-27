@@ -66,6 +66,12 @@ public class ItemServiceImpl implements ItemService {
   }
 
   @Override
+  public List<ItemDto> getItems() {
+    return itemRepository.findAll().stream().map(DomainModelMapper::itemToItemDto).collect(
+        Collectors.toList());
+  }
+
+  @Override
   public List<ItemDto> saveItem(List<ItemDto> itemDtos) {
     List<Item> savedItems =
         itemRepository.saveAll(
