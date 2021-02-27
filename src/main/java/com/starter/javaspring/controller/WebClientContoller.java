@@ -1,7 +1,7 @@
 package com.starter.javaspring.controller;
 
 import com.starter.javaspring.model.dto.ItemDto;
-import com.starter.javaspring.service.ClientService;
+import com.starter.javaspring.service.WebClientService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,23 +13,23 @@ import reactor.core.publisher.Flux;
 @RestController
 @RequestMapping("/client")
 @RequiredArgsConstructor
-public class ClientContoller {
+public class WebClientContoller {
 
-  private final ClientService clientService;
+  private final WebClientService webClientService;
 
   @GetMapping("/items")
   public Flux<ItemDto> getItems() {
-    return clientService.getAllItems();
+    return webClientService.getAllItems();
   }
 
   @GetMapping("/item")
   public ItemDto getItem(String itemName) {
-    return clientService.getAnItem(itemName);
+    return webClientService.getAnItem(itemName);
   }
 
   @PostMapping("/save")
   public List<ItemDto> saveItems(List<ItemDto> itemDtos) {
-    return clientService.saveItems(itemDtos);
+    return webClientService.saveItems(itemDtos);
   }
 
 }

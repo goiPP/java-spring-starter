@@ -8,7 +8,7 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Repository
-public class ClientRepository {
+public class WebClientRepository {
 
   WebClient webClient = WebClient.builder().baseUrl("http://localhost:8083").build();
 

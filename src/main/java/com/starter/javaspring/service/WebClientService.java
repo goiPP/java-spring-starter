@@ -4,7 +4,7 @@ import com.starter.javaspring.model.dto.ItemDto;
 import java.util.List;
 import reactor.core.publisher.Flux;
 
-public interface ClientService {
+public interface WebClientService {
 
   Flux<ItemDto> getAllItems();
 

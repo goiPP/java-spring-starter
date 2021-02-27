@@ -1,28 +1,25 @@
 package com.starter.javaspring.service.impl;
 
 import com.starter.javaspring.model.dto.ItemDto;
-import com.starter.javaspring.repository.ClientRepository;
-import com.starter.javaspring.service.ClientService;
+import com.starter.javaspring.repository.WebClientRepository;
+import com.starter.javaspring.service.WebClientService;
 import java.util.Arrays;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
-import reactor.core.publisher.Mono;
 
 @Service
 @Slf4j
 @RequiredArgsConstructor
-public class ClientServiceImpl implements ClientService {
+public class WebWebClientServiceImpl implements WebClientService {
 
-  private final ClientRepository clientRepository;
+  private final WebClientRepository webClientRepository;
 
   @Override
   public Flux<ItemDto> getAllItems() {
-    return clientRepository.getAllItems();
+    return webClientRepository.getAllItems();
   }
 
 //  @Override
@@ -34,13 +31,13 @@ public class ClientServiceImpl implements ClientService {
 
   @Override
   public ItemDto getAnItem(String itemName) {
-    return clientRepository.getItemByName(itemName).block();
+    return webClientRepository.getItemByName(itemName).block();
   }
 
   @Override
   public List<ItemDto> saveItems(List<ItemDto> itemDtos) {
     List<ItemDto> itemDtoList = Arrays.asList();
-    clientRepository.saveItems(itemDtos).map(ClientServiceImpl::changeItemName).subscribe(itemDtoList::add);
+    webClientRepository.saveItems(itemDtos).map(WebWebClientServiceImpl::changeItemName).subscribe(itemDtoList::add);
     return itemDtoList;
   }
 
