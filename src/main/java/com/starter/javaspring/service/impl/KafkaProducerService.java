@@ -1,5 +1,6 @@
 package com.starter.javaspring.service.impl;
 
+import com.starter.javaspring.configuration.KafkaTopicsConfiguration;
 import com.starter.javaspring.model.dto.ItemDto;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -12,12 +13,12 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class KafkaProducerService {
 
-  private static final String TOPIC = "goi-kafka-topic";
+  private final KafkaTopicsConfiguration kafkaTopicsConfiguration;
   private final KafkaTemplate<String, ItemDto> kafkaTemplate;
 
   private void sendMessage(ItemDto message) {
     log.info(String.format("#### -> Producing message -> %s", message.toString()));
-    this.kafkaTemplate.send(TOPIC, message);
+    this.kafkaTemplate.send(kafkaTopicsConfiguration.getItemEvent(), message);
   }
 
 //  public void publishSync(ItemDto message) {
