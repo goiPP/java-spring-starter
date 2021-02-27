@@ -34,3 +34,11 @@ Firebase:
 - Write a logic in firebase logic, it will be triggered and doing what we define (put logic in here instead of in application
 7. Machine Learning
 
+
+
+Kafka
+- Apache Kafka: https://www.cloudkarafka.com/blog/2016-11-30-part1-kafka-for-beginners-what-is-apache-kafka.html#:~:text=Apache%20Kafka%20is%20a%20publish,processes%2C%20applications%2C%20and%20servers.&text=Another%20application%20may%20connect%20to,retention%20period%20has%20passed%20by.
+- Kafka Zookeeper: https://www.cloudkarafka.com/blog/2018-07-04-cloudkarafka_what_is_zookeeper.html 
+- HA with kafka: https://jack-vanlightly.com/blog/2018/9/2/rabbitmq-vs-kafka-part-6-fault-tolerance-and-high-availability-with-kafka
+- tutorial: https://www.confluent.io/blog/apache-kafka-spring-boot-application/
+
