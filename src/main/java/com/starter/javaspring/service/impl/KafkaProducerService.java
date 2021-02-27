@@ -20,6 +20,35 @@ public class KafkaProducerService {
     this.kafkaTemplate.send(TOPIC, message);
   }
 
+//  public void publishSync(ItemDto message) {
+//    ListenableFuture<SendResult<String, ItemDto>> future = this.kafkaTemplate.send(TOPIC, message);
+//    try {
+//      SendResult<String, ItemDto> sendResult = future.get();
+//      log.info("Sent message=[" + message + "] with offset=[" + sendResult.getRecordMetadata().offset() + "]");
+//    } catch (InterruptedException | ExecutionException ex) {
+//      // throw any exception here
+//    }
+//
+//  }
+
+//  public void publishAsync(ItemDto message) {
+//    ListenableFuture<SendResult<String, ItemDto>> future = kafkaTemplate.send(TOPIC, message);
+//
+//    future.addCallback(new ListenableFutureCallback<SendResult<String, ItemDto>>() {
+//
+//      @Override
+//      public void onSuccess(SendResult<String, ItemDto> result) {
+//        log.info("Sent message=[" + message + "] with offset=[" + result.getRecordMetadata().offset() + "]");
+//      }
+//
+//      @Override
+//      public void onFailure(Throwable ex) {
+//        log.error("Unable to send message=[" + message + "] due to : " + ex.getMessage());
+//      }
+//
+//    });
+//  }
+
   public String publishToKafka(List<ItemDto> itemDtoList) {
     itemDtoList.forEach( itemDto -> sendMessage(itemDto));
     return "Publish Done";
