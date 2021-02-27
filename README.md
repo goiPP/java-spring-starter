@@ -41,4 +41,8 @@ Kafka
 - Kafka Zookeeper: https://www.cloudkarafka.com/blog/2018-07-04-cloudkarafka_what_is_zookeeper.html 
 - HA with kafka: https://jack-vanlightly.com/blog/2018/9/2/rabbitmq-vs-kafka-part-6-fault-tolerance-and-high-availability-with-kafka
 - tutorial: https://www.confluent.io/blog/apache-kafka-spring-boot-application/
+- There are so many ways to handle serialization (send) and Deserialization (listen)
+    1) Use provided Serializer for producer: value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    2) Consumer consumes string then use ObjectMapper convert to obj. before using
+    3) Create Custom Deserializer for T class (https://medium.com/@asce4s/send-and-receive-json-objects-with-kafka-java-client-41bfbb4de108)
 
