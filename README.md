@@ -45,4 +45,10 @@ Kafka
     1) Use provided Serializer for producer: value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     2) Consumer consumes string then use ObjectMapper convert to obj. before using
     3) Create Custom Deserializer for T class (https://medium.com/@asce4s/send-and-receive-json-objects-with-kafka-java-client-41bfbb4de108)
+    
+    
+    
+Feign Client
+- https://www.baeldung.com/spring-cloud-openfeign (not open-fiegn one)
+- localhost:8083/<pathVariable>?<param>=<value>
 
